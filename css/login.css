@@ -1,0 +1,215 @@
+h1, h2, h3, h4, h5, h6, p{
+    margin-bottom: 0px;
+}
+a{
+    text-decoration: none;
+}
+
+/* Organisation */
+.organisation{
+    background-color: #6B7A8F;
+    min-height: 100vh;
+}
+.organisation .volk-logo{
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.organisation .btn-group{
+    margin-bottom: 30px;
+}
+.organisation .btn-group>.btn:not(:last-child):not(.dropdown-toggle){
+    border-radius: 10px 0px 0px 10px;
+}
+.organisation .btn-group>:not(.btn-check)+.btn{
+    border-radius: 0px 10px 10px 0px;
+}
+.organisation .btn-group .btn-primary{
+    background-color: transparent;
+    border-color: white;
+    font-size: 14px;
+    padding: 8px 16px;
+    font-weight: 600;
+}
+.organisation .btn-group .btn-primary:focus{
+    box-shadow: none;
+}
+.organisation .btn-group .btn-primary:hover{
+    background-color: #fff;
+    color: #F7882F;
+}
+.organisation .btn-group .active{
+    background-color: #fff;
+    color: #F7882F;
+}
+
+.organisation-login{
+    max-width: 1050px;
+    margin-left: 126px;
+    padding-bottom: 94px;
+    justify-content: center;
+}
+.organisation-login .col-md-7{
+    width: 57.91%;
+}
+.organisation-login .col-md-5{
+    width: calc(100% - 57.91%);
+    padding: 42px 81px;
+}
+.login-box{
+    background-color: #fff;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 0px 20px 20px 0px;
+    color: #707070;
+}
+.login-box h4{
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.login-box h4 span{
+    color: #E6E6E6;
+}
+.login-box p{
+    font-size: 14px;
+    font-weight: 600;
+}
+.login-box .form-floating{
+    border-bottom: 1px solid #6B7A8F;
+    margin-top: 20px;
+}
+.login-box .form-floating .form-control{
+    border: none;
+    background-color: #E6E6E6;
+    border-radius: 5px 5px 0px 0px;
+    color: #707070;
+    width: 280px;
+    font-weight: 600;
+}
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label,
+.form-floating>.form-select~label{
+    opacity: 1;
+    color: #6B7A8F;
+    font-size: 10px;
+    font-weight: 600;
+}
+.login-box .form-floating .form-control:focus,
+.login-box .forgot-password .form-check-input:focus,
+.login-box .btn-primary{
+    box-shadow: none;
+}
+.login-box .forgot-password{
+    margin-top: 10px;
+}
+.login-box .forgot-password .form-check{
+    margin-bottom: 0;
+}
+.login-box .forgot-password .form-check-label,
+.login-box .forgot-password a{
+    font-size: 12px;
+}
+.login-box .forgot-password a{
+    color: #707070;
+}
+.login-box .forgot-password .form-check-input{
+    border-color: #707070;
+    border-radius: 2px;
+    margin-top: 5px;
+}
+.login-box .forgot-password .form-check-input:checked {
+    background-color: #F7882F;
+    border-color: #F7882F;
+}
+.login-box .btn-primary{
+    background-color: #E6E6E6;
+    border: none;
+    border-radius: 10px;
+    color: #707070;
+    padding: 8px 16px;
+    font-size: 14px;
+    margin: 20px 0px;
+}
+.login-box .btn-primary:hover{
+    background-color: #F7882F;
+    color: #FFFFFF;
+}
+.login-box .create-account{
+    font-size: 12px;
+}
+.login-box .create-account a{
+    color: #5B32B4;
+}
+
+.forgot{
+    margin-top: 60px;
+}
+.password{
+    margin-top: 48px;
+}
+
+.register-account{
+    max-width: 738px;
+    border-radius: 20px;
+    padding: 42px 81px 49px;
+}
+.register-account .btn-primary{
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .organisation{
+        height: auto;
+    }
+    .organisation h1{
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .organisation-login{
+        width: 100%;
+        margin-left: 0px;
+        padding-bottom: 40px;
+    }
+    .organisation-login .col-md-7{
+        width: 100%;
+    }
+    .organisation-login .col-md-7 img{
+        border-radius: 20px;
+        margin-bottom: 15px;
+    }
+    .organisation-login .col-md-5{
+        width: 100%;
+        padding: 15px;
+    }
+    .login-box{
+        border-radius: 20px;
+    }
+    .login-box h4{
+        margin-bottom: 5px;
+    }
+    .login-box .form-floating{
+        margin-top: 15px;
+    }
+    .login-box .form-floating .form-control{
+        width: 100%;
+    }
+    .login-box .forgot-password{
+        margin-top: 5px;
+    }
+    .forgot{
+        margin-top: 0px;
+    }
+    .password{
+        margin-top: 0px;
+    }
+    .login-box .btn-primary{
+        margin: 15px 0px;
+    }
+    .set-password .btn-primary{
+        margin-bottom: 0;
+    }
+    .register-account{
+        padding: 15px;
+    }
+    .register-details{
+        flex-direction: column;
+    }
+}

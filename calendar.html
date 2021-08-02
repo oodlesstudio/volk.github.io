@@ -1,0 +1,946 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/calendar.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css">
+
+    <title>Volk - Dashboard Calendar</title>
+</head>
+
+<body>
+    <!-- Dashboard -->
+    <section class="dashboard">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Dashboard Left -->
+                <div class="dashboard-left">
+                    <h1 class="text-center">Volk</h1>
+
+                    <nav class="nav flex-column">
+                        <a class="nav-link active" aria-current="page" href="dashboard.html"><img
+                                src="img/icons/dashboard.svg">Dashboard</a>
+                        <a class="nav-link" href="#"><img src="img/icons/my-employees.svg">My Employees</a>
+                        <a class="nav-link" href="#"><img src="img/icons/layoffs.svg">Layoffs</a>
+                        <a class="nav-link" href="#"><img src="img/icons/job-posting.svg">Job Posting</a>
+                        <a class="nav-link" href="#"><img src="img/icons/search-candidate.svg">Search Candidate</a>
+                        <a class="nav-link" href="#"><img src="img/icons/interview.svg">Interview</a>
+                    </nav>
+
+                    <div class="logout text-center">
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+
+                <!-- Dashboard Right -->
+                <div class="dashboard-right">
+                    <!-- Header -->
+                    <header class="header d-flex align-items-center justify-content-between">
+                        <div class="header-left">
+                            <h2>Dashboard</h2>
+                            <p>Welcome, <span>Ajith</span></p>
+                        </div>
+                        <div class="border-right"></div>
+                        <div class="form-group has-search">
+                            <span class="fa fa-search form-control-feedback"></span>
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <div>
+                            <a href="#">
+                                <i class="far fa-bell"></i>
+                            </a>
+                        </div>
+                        <div class="header-right">
+                            <div class="header-right-top">VolkHr</div>
+                            <div class="header-right-bottom">(Admin)</div>
+                        </div>
+                    </header>
+
+                    <!-- Reminder -->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="calender">
+
+                                <div class="ui container">
+                                    <div class="ui grid">
+                                        <div class="ui sixteen column">
+                                            <div id="calendar" class="fc fc-unthemed fc-ltr">
+                                                <div class="fc-toolbar fc-header-toolbar">
+                                                    <div class="fc-left">
+                                                        <div class="fc-button-group"><button type="button"
+                                                                class="fc-prev-button fc-button fc-state-default fc-corner-left"><span
+                                                                    class="fc-icon fc-icon-left-single-arrow"></span></button><button
+                                                                type="button"
+                                                                class="fc-next-button fc-button fc-state-default fc-corner-right"><span
+                                                                    class="fc-icon fc-icon-right-single-arrow"></span></button>
+                                                        </div><button type="button"
+                                                            class="fc-today-button fc-button fc-state-default fc-corner-left fc-corner-right">today</button>
+                                                    </div>
+                                                    <div class="fc-right">
+                                                        <div class="fc-button-group"><button type="button"
+                                                                class="fc-month-button fc-button fc-state-default fc-corner-left fc-state-active">month</button><button
+                                                                type="button"
+                                                                class="fc-basicWeek-button fc-button fc-state-default">week</button><button
+                                                                type="button"
+                                                                class="fc-basicDay-button fc-button fc-state-default fc-corner-right">day</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fc-center">
+                                                        <h2>December 2016</h2>
+                                                    </div>
+                                                    <div class="fc-clear"></div>
+                                                </div>
+                                                <div class="fc-view-container">
+                                                    <div class="fc-view fc-month-view fc-basic-view">
+                                                        <table>
+                                                            <thead class="fc-head">
+                                                                <tr>
+                                                                    <td class="fc-head-container fc-widget-header">
+                                                                        <div class="fc-row fc-widget-header"
+                                                                            style="border-right-width: 1px; margin-right: -0.078125px;">
+                                                                            <table>
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th
+                                                                                            class="fc-day-header fc-widget-header fc-mon">
+                                                                                            <span>Mon</span>
+                                                                                        </th>
+                                                                                        <th
+                                                                                            class="fc-day-header fc-widget-header fc-tue">
+                                                                                            <span>Tue</span>
+                                                                                        </th>
+                                                                                        <th
+                                                                                            class="fc-day-header fc-widget-header fc-wed">
+                                                                                            <span>Wed</span>
+                                                                                        </th>
+                                                                                        <th
+                                                                                            class="fc-day-header fc-widget-header fc-thu">
+                                                                                            <span>Thu</span>
+                                                                                        </th>
+                                                                                        <th
+                                                                                            class="fc-day-header fc-widget-header fc-fri">
+                                                                                            <span>Fri</span>
+                                                                                        </th>
+                                                                                        <th
+                                                                                            class="fc-day-header fc-widget-header fc-sat">
+                                                                                            <span>Sat</span>
+                                                                                        </th>
+                                                                                        <th
+                                                                                            class="fc-day-header fc-widget-header fc-sun">
+                                                                                            <span>Sun</span>
+                                                                                        </th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                            </table>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody class="fc-body">
+                                                                <tr>
+                                                                    <td class="fc-widget-content">
+                                                                        <div class="fc-scroller fc-day-grid-container"
+                                                                            style="overflow: hidden scroll; height: 466px;">
+                                                                            <div class="fc-day-grid fc-unselectable">
+                                                                                <div class="fc-row fc-week fc-widget-content fc-rigid"
+                                                                                    style="height: 77px;">
+                                                                                    <div class="fc-bg">
+                                                                                        <table>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td class="fc-day fc-widget-content fc-sun fc-other-month fc-past"
+                                                                                                        data-date="2016-11-27">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-mon fc-other-month fc-past"
+                                                                                                        data-date="2016-11-28">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-tue fc-other-month fc-past"
+                                                                                                        data-date="2016-11-29">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-wed fc-other-month fc-past"
+                                                                                                        data-date="2016-11-30">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-thu fc-past"
+                                                                                                        data-date="2016-12-01">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-fri fc-past"
+                                                                                                        data-date="2016-12-02">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-sat fc-past"
+                                                                                                        data-date="2016-12-03">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                    <div class="fc-content-skeleton">
+                                                                                        <table>
+                                                                                            <thead>
+                                                                                                <tr>
+                                                                                                    <td class="fc-day-top fc-sun fc-other-month fc-past"
+                                                                                                        data-date="2016-11-27">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-11-27&quot;,&quot;type&quot;:&quot;day&quot;}">27</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-mon fc-other-month fc-past"
+                                                                                                        data-date="2016-11-28">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-11-28&quot;,&quot;type&quot;:&quot;day&quot;}">28</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-tue fc-other-month fc-past"
+                                                                                                        data-date="2016-11-29">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-11-29&quot;,&quot;type&quot;:&quot;day&quot;}">29</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-wed fc-other-month fc-past"
+                                                                                                        data-date="2016-11-30">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-11-30&quot;,&quot;type&quot;:&quot;day&quot;}">30</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-thu fc-past"
+                                                                                                        data-date="2016-12-01">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-01&quot;,&quot;type&quot;:&quot;day&quot;}">1</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-fri fc-past"
+                                                                                                        data-date="2016-12-02">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-02&quot;,&quot;type&quot;:&quot;day&quot;}">2</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-sat fc-past"
+                                                                                                        data-date="2016-12-03">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-03&quot;,&quot;type&quot;:&quot;day&quot;}">3</a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td></td>
+                                                                                                    <td></td>
+                                                                                                    <td></td>
+                                                                                                    <td></td>
+                                                                                                    <td
+                                                                                                        class="fc-event-container">
+                                                                                                        <a
+                                                                                                            class="fc-day-grid-event fc-h-event fc-event fc-start fc-end fc-draggable fc-resizable">
+                                                                                                            <div
+                                                                                                                class="fc-content">
+                                                                                                                <span
+                                                                                                                    class="fc-title">All
+                                                                                                                    Day
+                                                                                                                    Event</span>
+                                                                                                            </div>
+                                                                                                            <div
+                                                                                                                class="fc-resizer fc-end-resizer">
+                                                                                                            </div>
+                                                                                                        </a>
+                                                                                                    </td>
+                                                                                                    <td></td>
+                                                                                                    <td></td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="fc-row fc-week fc-widget-content fc-rigid"
+                                                                                    style="height: 77px;">
+                                                                                    <div class="fc-bg">
+                                                                                        <table>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td class="fc-day fc-widget-content fc-sun fc-past"
+                                                                                                        data-date="2016-12-04">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-mon fc-past"
+                                                                                                        data-date="2016-12-05">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-tue fc-past"
+                                                                                                        data-date="2016-12-06">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-wed fc-past"
+                                                                                                        data-date="2016-12-07">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-thu fc-past"
+                                                                                                        data-date="2016-12-08">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-fri fc-past"
+                                                                                                        data-date="2016-12-09">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-sat fc-past"
+                                                                                                        data-date="2016-12-10">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                    <div class="fc-content-skeleton">
+                                                                                        <table>
+                                                                                            <thead>
+                                                                                                <tr>
+                                                                                                    <td class="fc-day-top fc-sun fc-past"
+                                                                                                        data-date="2016-12-04">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-04&quot;,&quot;type&quot;:&quot;day&quot;}">4</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-mon fc-past"
+                                                                                                        data-date="2016-12-05">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-05&quot;,&quot;type&quot;:&quot;day&quot;}">5</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-tue fc-past"
+                                                                                                        data-date="2016-12-06">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-06&quot;,&quot;type&quot;:&quot;day&quot;}">6</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-wed fc-past"
+                                                                                                        data-date="2016-12-07">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-07&quot;,&quot;type&quot;:&quot;day&quot;}">7</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-thu fc-past"
+                                                                                                        data-date="2016-12-08">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-08&quot;,&quot;type&quot;:&quot;day&quot;}">8</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-fri fc-past"
+                                                                                                        data-date="2016-12-09">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-09&quot;,&quot;type&quot;:&quot;day&quot;}">9</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-sat fc-past"
+                                                                                                        data-date="2016-12-10">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-10&quot;,&quot;type&quot;:&quot;day&quot;}">10</a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td rowspan="2">
+                                                                                                    </td>
+                                                                                                    <td rowspan="2">
+                                                                                                    </td>
+                                                                                                    <td rowspan="2">
+                                                                                                    </td>
+                                                                                                    <td class="fc-event-container"
+                                                                                                        colspan="3"><a
+                                                                                                            class="fc-day-grid-event fc-h-event fc-event fc-start fc-end fc-draggable fc-resizable">
+                                                                                                            <div
+                                                                                                                class="fc-content">
+                                                                                                                <span
+                                                                                                                    class="fc-title">Long
+                                                                                                                    Event</span>
+                                                                                                            </div>
+                                                                                                            <div
+                                                                                                                class="fc-resizer fc-end-resizer">
+                                                                                                            </div>
+                                                                                                        </a></td>
+                                                                                                    <td rowspan="2">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td></td>
+                                                                                                    <td></td>
+                                                                                                    <td
+                                                                                                        class="fc-event-container">
+                                                                                                        <a
+                                                                                                            class="fc-day-grid-event fc-h-event fc-event fc-start fc-end fc-draggable">
+                                                                                                            <div
+                                                                                                                class="fc-content">
+                                                                                                                <span
+                                                                                                                    class="fc-time">4p</span>
+                                                                                                                <span
+                                                                                                                    class="fc-title">Repeating
+                                                                                                                    Event</span>
+                                                                                                            </div>
+                                                                                                        </a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="fc-row fc-week fc-widget-content fc-rigid"
+                                                                                    style="height: 77px;">
+                                                                                    <div class="fc-bg">
+                                                                                        <table>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td class="fc-day fc-widget-content fc-sun fc-past"
+                                                                                                        data-date="2016-12-11">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-mon fc-past"
+                                                                                                        data-date="2016-12-12">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-tue fc-past"
+                                                                                                        data-date="2016-12-13">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-wed fc-past"
+                                                                                                        data-date="2016-12-14">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-thu fc-past"
+                                                                                                        data-date="2016-12-15">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-fri fc-past"
+                                                                                                        data-date="2016-12-16">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-sat fc-past"
+                                                                                                        data-date="2016-12-17">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                    <div class="fc-content-skeleton">
+                                                                                        <table>
+                                                                                            <thead>
+                                                                                                <tr>
+                                                                                                    <td class="fc-day-top fc-sun fc-past"
+                                                                                                        data-date="2016-12-11">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-11&quot;,&quot;type&quot;:&quot;day&quot;}">11</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-mon fc-past"
+                                                                                                        data-date="2016-12-12">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-12&quot;,&quot;type&quot;:&quot;day&quot;}">12</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-tue fc-past"
+                                                                                                        data-date="2016-12-13">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-13&quot;,&quot;type&quot;:&quot;day&quot;}">13</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-wed fc-past"
+                                                                                                        data-date="2016-12-14">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-14&quot;,&quot;type&quot;:&quot;day&quot;}">14</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-thu fc-past"
+                                                                                                        data-date="2016-12-15">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-15&quot;,&quot;type&quot;:&quot;day&quot;}">15</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-fri fc-past"
+                                                                                                        data-date="2016-12-16">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-16&quot;,&quot;type&quot;:&quot;day&quot;}">16</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-sat fc-past"
+                                                                                                        data-date="2016-12-17">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-17&quot;,&quot;type&quot;:&quot;day&quot;}">17</a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td class="fc-event-container"
+                                                                                                        colspan="2"><a
+                                                                                                            class="fc-day-grid-event fc-h-event fc-event fc-start fc-end fc-draggable fc-resizable">
+                                                                                                            <div
+                                                                                                                class="fc-content">
+                                                                                                                <span
+                                                                                                                    class="fc-title">Conference</span>
+                                                                                                            </div>
+                                                                                                            <div
+                                                                                                                class="fc-resizer fc-end-resizer">
+                                                                                                            </div>
+                                                                                                        </a></td>
+                                                                                                    <td class="fc-event-container"
+                                                                                                        rowspan="6"><a
+                                                                                                            class="fc-day-grid-event fc-h-event fc-event fc-start fc-end fc-draggable">
+                                                                                                            <div
+                                                                                                                class="fc-content">
+                                                                                                                <span
+                                                                                                                    class="fc-time">7a</span>
+                                                                                                                <span
+                                                                                                                    class="fc-title">Birthday
+                                                                                                                    Party</span>
+                                                                                                            </div>
+                                                                                                        </a></td>
+                                                                                                    <td rowspan="6">
+                                                                                                    </td>
+                                                                                                    <td rowspan="6">
+                                                                                                    </td>
+                                                                                                    <td class="fc-event-container"
+                                                                                                        rowspan="6"><a
+                                                                                                            class="fc-day-grid-event fc-h-event fc-event fc-start fc-end fc-draggable">
+                                                                                                            <div
+                                                                                                                class="fc-content">
+                                                                                                                <span
+                                                                                                                    class="fc-time">4p</span>
+                                                                                                                <span
+                                                                                                                    class="fc-title">Repeating
+                                                                                                                    Event</span>
+                                                                                                            </div>
+                                                                                                        </a></td>
+                                                                                                    <td rowspan="6">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td rowspan="5">
+                                                                                                    </td>
+                                                                                                    <td
+                                                                                                        class="fc-event-container fc-limited">
+                                                                                                        <a
+                                                                                                            class="fc-day-grid-event fc-h-event fc-event fc-start fc-end fc-draggable">
+                                                                                                            <div
+                                                                                                                class="fc-content">
+                                                                                                                <span
+                                                                                                                    class="fc-time">10:30a</span>
+                                                                                                                <span
+                                                                                                                    class="fc-title">Meeting</span>
+                                                                                                            </div>
+                                                                                                        </a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-more-cell"
+                                                                                                        rowspan="1">
+                                                                                                        <div><a
+                                                                                                                class="fc-more">+5
+                                                                                                                more</a>
+                                                                                                        </div>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr class="fc-limited">
+                                                                                                    <td
+                                                                                                        class="fc-event-container">
+                                                                                                        <a
+                                                                                                            class="fc-day-grid-event fc-h-event fc-event fc-start fc-end fc-draggable">
+                                                                                                            <div
+                                                                                                                class="fc-content">
+                                                                                                                <span
+                                                                                                                    class="fc-time">12p</span>
+                                                                                                                <span
+                                                                                                                    class="fc-title">Lunch</span>
+                                                                                                            </div>
+                                                                                                        </a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr class="fc-limited">
+                                                                                                    <td
+                                                                                                        class="fc-event-container">
+                                                                                                        <a
+                                                                                                            class="fc-day-grid-event fc-h-event fc-event fc-start fc-end fc-draggable">
+                                                                                                            <div
+                                                                                                                class="fc-content">
+                                                                                                                <span
+                                                                                                                    class="fc-time">2:30p</span>
+                                                                                                                <span
+                                                                                                                    class="fc-title">Meeting</span>
+                                                                                                            </div>
+                                                                                                        </a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr class="fc-limited">
+                                                                                                    <td
+                                                                                                        class="fc-event-container">
+                                                                                                        <a
+                                                                                                            class="fc-day-grid-event fc-h-event fc-event fc-start fc-end fc-draggable">
+                                                                                                            <div
+                                                                                                                class="fc-content">
+                                                                                                                <span
+                                                                                                                    class="fc-time">5:30p</span>
+                                                                                                                <span
+                                                                                                                    class="fc-title">Happy
+                                                                                                                    Hour</span>
+                                                                                                            </div>
+                                                                                                        </a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr class="fc-limited">
+                                                                                                    <td
+                                                                                                        class="fc-event-container">
+                                                                                                        <a
+                                                                                                            class="fc-day-grid-event fc-h-event fc-event fc-start fc-end fc-draggable">
+                                                                                                            <div
+                                                                                                                class="fc-content">
+                                                                                                                <span
+                                                                                                                    class="fc-time">8p</span>
+                                                                                                                <span
+                                                                                                                    class="fc-title">Dinner</span>
+                                                                                                            </div>
+                                                                                                        </a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="fc-row fc-week fc-widget-content fc-rigid"
+                                                                                    style="height: 77px;">
+                                                                                    <div class="fc-bg">
+                                                                                        <table>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td class="fc-day fc-widget-content fc-sun fc-past"
+                                                                                                        data-date="2016-12-18">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-mon fc-past"
+                                                                                                        data-date="2016-12-19">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-tue fc-past"
+                                                                                                        data-date="2016-12-20">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-wed fc-past"
+                                                                                                        data-date="2016-12-21">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-thu fc-past"
+                                                                                                        data-date="2016-12-22">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-fri fc-past"
+                                                                                                        data-date="2016-12-23">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-sat fc-past"
+                                                                                                        data-date="2016-12-24">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                    <div class="fc-content-skeleton">
+                                                                                        <table>
+                                                                                            <thead>
+                                                                                                <tr>
+                                                                                                    <td class="fc-day-top fc-sun fc-past"
+                                                                                                        data-date="2016-12-18">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-18&quot;,&quot;type&quot;:&quot;day&quot;}">18</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-mon fc-past"
+                                                                                                        data-date="2016-12-19">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-19&quot;,&quot;type&quot;:&quot;day&quot;}">19</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-tue fc-past"
+                                                                                                        data-date="2016-12-20">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-20&quot;,&quot;type&quot;:&quot;day&quot;}">20</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-wed fc-past"
+                                                                                                        data-date="2016-12-21">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-21&quot;,&quot;type&quot;:&quot;day&quot;}">21</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-thu fc-past"
+                                                                                                        data-date="2016-12-22">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-22&quot;,&quot;type&quot;:&quot;day&quot;}">22</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-fri fc-past"
+                                                                                                        data-date="2016-12-23">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-23&quot;,&quot;type&quot;:&quot;day&quot;}">23</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-sat fc-past"
+                                                                                                        data-date="2016-12-24">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-24&quot;,&quot;type&quot;:&quot;day&quot;}">24</a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td></td>
+                                                                                                    <td></td>
+                                                                                                    <td></td>
+                                                                                                    <td></td>
+                                                                                                    <td></td>
+                                                                                                    <td></td>
+                                                                                                    <td></td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="fc-row fc-week fc-widget-content fc-rigid"
+                                                                                    style="height: 77px;">
+                                                                                    <div class="fc-bg">
+                                                                                        <table>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td class="fc-day fc-widget-content fc-sun fc-past"
+                                                                                                        data-date="2016-12-25">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-mon fc-past"
+                                                                                                        data-date="2016-12-26">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-tue fc-past"
+                                                                                                        data-date="2016-12-27">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-wed fc-past"
+                                                                                                        data-date="2016-12-28">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-thu fc-past"
+                                                                                                        data-date="2016-12-29">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-fri fc-past"
+                                                                                                        data-date="2016-12-30">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-sat fc-past"
+                                                                                                        data-date="2016-12-31">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                    <div class="fc-content-skeleton">
+                                                                                        <table>
+                                                                                            <thead>
+                                                                                                <tr>
+                                                                                                    <td class="fc-day-top fc-sun fc-past"
+                                                                                                        data-date="2016-12-25">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-25&quot;,&quot;type&quot;:&quot;day&quot;}">25</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-mon fc-past"
+                                                                                                        data-date="2016-12-26">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-26&quot;,&quot;type&quot;:&quot;day&quot;}">26</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-tue fc-past"
+                                                                                                        data-date="2016-12-27">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-27&quot;,&quot;type&quot;:&quot;day&quot;}">27</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-wed fc-past"
+                                                                                                        data-date="2016-12-28">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-28&quot;,&quot;type&quot;:&quot;day&quot;}">28</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-thu fc-past"
+                                                                                                        data-date="2016-12-29">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-29&quot;,&quot;type&quot;:&quot;day&quot;}">29</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-fri fc-past"
+                                                                                                        data-date="2016-12-30">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-30&quot;,&quot;type&quot;:&quot;day&quot;}">30</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-sat fc-past"
+                                                                                                        data-date="2016-12-31">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2016-12-31&quot;,&quot;type&quot;:&quot;day&quot;}">31</a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td></td>
+                                                                                                    <td></td>
+                                                                                                    <td></td>
+                                                                                                    <td
+                                                                                                        class="fc-event-container">
+                                                                                                        <a class="fc-day-grid-event fc-h-event fc-event fc-start fc-end fc-draggable fc-resizable"
+                                                                                                            href="https://google.com/">
+                                                                                                            <div
+                                                                                                                class="fc-content">
+                                                                                                                <span
+                                                                                                                    class="fc-title">Click
+                                                                                                                    for
+                                                                                                                    Google</span>
+                                                                                                            </div>
+                                                                                                            <div
+                                                                                                                class="fc-resizer fc-end-resizer">
+                                                                                                            </div>
+                                                                                                        </a>
+                                                                                                    </td>
+                                                                                                    <td></td>
+                                                                                                    <td></td>
+                                                                                                    <td></td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="fc-row fc-week fc-widget-content fc-rigid"
+                                                                                    style="height: 81px;">
+                                                                                    <div class="fc-bg">
+                                                                                        <table>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td class="fc-day fc-widget-content fc-sun fc-other-month fc-past"
+                                                                                                        data-date="2017-01-01">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-mon fc-other-month fc-past"
+                                                                                                        data-date="2017-01-02">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-tue fc-other-month fc-past"
+                                                                                                        data-date="2017-01-03">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-wed fc-other-month fc-past"
+                                                                                                        data-date="2017-01-04">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-thu fc-other-month fc-past"
+                                                                                                        data-date="2017-01-05">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-fri fc-other-month fc-past"
+                                                                                                        data-date="2017-01-06">
+                                                                                                    </td>
+                                                                                                    <td class="fc-day fc-widget-content fc-sat fc-other-month fc-past"
+                                                                                                        data-date="2017-01-07">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                    <div class="fc-content-skeleton">
+                                                                                        <table>
+                                                                                            <thead>
+                                                                                                <tr>
+                                                                                                    <td class="fc-day-top fc-sun fc-other-month fc-past"
+                                                                                                        data-date="2017-01-01">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2017-01-01&quot;,&quot;type&quot;:&quot;day&quot;}">1</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-mon fc-other-month fc-past"
+                                                                                                        data-date="2017-01-02">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2017-01-02&quot;,&quot;type&quot;:&quot;day&quot;}">2</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-tue fc-other-month fc-past"
+                                                                                                        data-date="2017-01-03">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2017-01-03&quot;,&quot;type&quot;:&quot;day&quot;}">3</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-wed fc-other-month fc-past"
+                                                                                                        data-date="2017-01-04">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2017-01-04&quot;,&quot;type&quot;:&quot;day&quot;}">4</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-thu fc-other-month fc-past"
+                                                                                                        data-date="2017-01-05">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2017-01-05&quot;,&quot;type&quot;:&quot;day&quot;}">5</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-fri fc-other-month fc-past"
+                                                                                                        data-date="2017-01-06">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2017-01-06&quot;,&quot;type&quot;:&quot;day&quot;}">6</a>
+                                                                                                    </td>
+                                                                                                    <td class="fc-day-top fc-sat fc-other-month fc-past"
+                                                                                                        data-date="2017-01-07">
+                                                                                                        <a class="fc-day-number"
+                                                                                                            data-goto="{&quot;date&quot;:&quot;2017-01-07&quot;,&quot;type&quot;:&quot;day&quot;}">7</a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td></td>
+                                                                                                    <td></td>
+                                                                                                    <td></td>
+                                                                                                    <td></td>
+                                                                                                    <td></td>
+                                                                                                    <td></td>
+                                                                                                    <td></td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="reminder">
+                                <!-- Reminder Heading -->
+                                <div class="reminder-heading">
+                                    Create New Event
+                                </div>
+
+                                <!-- Reminder One -->
+                                <div class="reminder-one d-flex align-items-center">
+                                    <div class="reminder-left w-50">
+                                        <div>Interview Scheduled with - Abhishek Verma @ 12</div>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                        </p>
+                                    </div>
+                                    <div class="reminder-center w-40 text-center">
+                                        <a href="#">Mark as Done</a>
+                                    </div>
+                                    <div class="reminder-right w-10 text-end">
+                                        <a href="#">Remove</a>
+                                    </div>
+                                </div>
+
+                                <!-- Reminder One -->
+                                <div class="reminder-one d-flex align-items-center">
+                                    <div class="reminder-left w-50">
+                                        <div>Shortlist candidates for Designer Profile @ 12</div>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                    </div>
+                                    <div class="reminder-center w-40 text-center">
+                                        <a href="#">Mark as ReDo</a>
+                                    </div>
+                                    <div class="reminder-right w-10 text-end">
+                                        <a href="#">Remove</a>
+                                    </div>
+                                </div>
+
+                                <!-- Reminder One -->
+                                <div class="reminder-one d-flex align-items-center">
+                                    <div class="reminder-left w-50">
+                                        Interview Scheduled with - Aditya Kumar @ 12
+                                    </div>
+                                    <div class="reminder-center w-40 text-center">
+                                        <a href="#">Mark as ReDo</a>
+                                    </div>
+                                    <div class="reminder-right w-10 text-end">
+                                        <a href="#">Remove</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+        integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

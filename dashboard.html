@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css">
+
+    <title>Volk - Dashboard</title>
+</head>
+
+<body>
+    <!-- Dashboard -->
+    <section class="dashboard">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Dashboard Left -->
+                <div class="dashboard-left">
+                    <div class="text-center">
+                        <img src="img/volk-logo.svg" alt="Volk Logo">
+                    </div>
+
+
+                    <nav class="nav flex-column">
+                        <a class="nav-link active" aria-current="page" href="dashboard.html"><img
+                                src="img/icons/dashboard.svg">Dashboard</a>
+                        <a class="nav-link" href="#"><img src="img/icons/my-employees.svg">My Employees</a>
+                        <a class="nav-link" href="#"><img src="img/icons/layoffs.svg">Layoffs</a>
+                        <a class="nav-link" href="#"><img src="img/icons/job-posting.svg">Job Posting</a>
+                        <a class="nav-link" href="#"><img src="img/icons/search-candidate.svg">Search Candidate</a>
+                        <a class="nav-link" href="#"><img src="img/icons/interview.svg">Interview</a>
+                    </nav>
+
+                    <div class="d-flex justify-content-center">
+                        <div class="logout d-flex align-items-center justify-content-center">
+                            <a href="#" class="text-center">
+                                <div><img src="img/icons/logout.svg"></div>
+                                <div>Logout</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard Right -->
+                <div class="dashboard-right overflow-auto">
+                    <!-- Header -->
+                    <header class="header d-flex align-items-center justify-content-between">
+                        <div class="header-left">
+                            <h2>Dashboard</h2>
+                            <p>Welcome, <span>Ajith</span></p>
+                        </div>
+
+                        <div class="header-right d-flex align-items-center">
+                            <div class="border-right"></div>
+                            <div class="form-group has-search position-relative">
+                                <span class="fa fa-search form-control-feedback"></span>
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <a href="#" class="notification">
+                                <img src="img/icons/bell.svg">
+                            </a>
+                            <a href="#">
+                                <img src="img/profile.png" alt="VolkHR">
+                            </a>
+                            <a href="#">
+                                <div class="header-right-top">VolkHr</div>
+                                <div class="header-right-bottom">(Admin)</div>
+                            </a>
+                        </div>
+                    </header>
+
+                    <!-- Numbers -->
+                    <div class="row">
+                        <div class="numbers d-flex justify-content-between">
+                            <!-- Layoffs -->
+                            <div class="layoffs d-flex">
+                                <div>
+                                    <img src="img/icons/layoff.svg" alt="Layoffs">
+                                </div>
+                                <div>
+                                    <h2>132</h2>
+                                    <span>Layoffs</span>
+                                </div>
+                            </div>
+
+                            <!-- Hiring -->
+                            <div class="layoffs d-flex">
+                                <div>
+                                    <img src="img/icons/hiring.svg" alt="Hiring">
+                                </div>
+                                <div>
+                                    <h2>75</h2>
+                                    <span>Hiring</span>
+                                </div>
+                            </div>
+
+                            <!-- Outplaced -->
+                            <div class="layoffs d-flex">
+                                <div>
+                                    <img src="img/icons/outplaced.svg" alt="Outplaced">
+                                </div>
+                                <div>
+                                    <h2>72</h2>
+                                    <span>Outplaced</span>
+                                </div>
+                            </div>
+
+                            <!-- Active Job Posts -->
+                            <div class="layoffs d-flex">
+                                <div>
+                                    <img src="img/icons/job-posts.svg" alt="Active Job Posts">
+                                </div>
+                                <div>
+                                    <h2>234</h2>
+                                    <span>Active Job Posts</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reminder -->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="reminder">
+                                <!-- Reminder Heading -->
+                                <div class="reminder-heading d-flex justify-content-between align-items-center">
+                                    <div>To-Do List</div>
+                                    <div class="d-flex">
+                                        <div class="circle-border"></div>
+                                        <div class="circle-border"></div>
+                                        <div class="circle-border"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Reminder One -->
+                                <div class="reminder-one d-flex align-items-center">
+                                    <div class="reminder-left w-50">
+                                        <div>Interview Scheduled with - Abhishek Verma @ 12</div>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                        </p>
+                                    </div>
+                                    <div class="reminder-center w-40 text-center">
+                                        <a href="#">Mark as Done</a>
+                                    </div>
+                                    <div class="reminder-right w-10 text-end">
+                                        <a href="#">Remove</a>
+                                    </div>
+                                </div>
+
+                                <!-- Reminder One -->
+                                <div class="reminder-one d-flex align-items-center">
+                                    <div class="reminder-left w-50">
+                                        <div>Shortlist candidates for Designer Profile @ 12</div>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                    </div>
+                                    <div class="reminder-center w-40 text-center">
+                                        <a href="#">Mark as ReDo</a>
+                                    </div>
+                                    <div class="reminder-right w-10 text-end">
+                                        <a href="#">Remove</a>
+                                    </div>
+                                </div>
+
+                                <!-- Reminder One -->
+                                <div class="reminder-one d-flex align-items-center pb-4">
+                                    <div class="reminder-left w-50">
+                                        Interview Scheduled with - Aditya Kumar @ 12
+                                    </div>
+                                    <div class="reminder-center w-40 text-center">
+                                        <a href="#">Mark as ReDo</a>
+                                    </div>
+                                    <div class="reminder-right w-10 text-end">
+                                        <a href="#">Remove</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="calender">
+                                <div class="calender-button text-end">
+                                    <a href="#">Add Event</a>
+                                </div>
+
+                                <div class="ui container">
+                                    <div class="ui grid">
+                                        <div class="ui sixteen column">
+                                            <div id="calendar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Company Strength -->
+                    <div class="company-strength">
+                        <!-- Company Heading -->
+                        <div class="company-heading">
+                            Company Strength
+                        </div>
+                        <div class="chart">
+                            <canvas class="w-100" id="myChart" width="900" height="380"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Active Job Posts -->
+                    <div class="active-job-posts">
+                        <!-- Job Heading -->
+                        <div class="job-heading d-flex justify-content-between">
+                            <div>Active Job Posts</div>
+                            <div>
+                                <a href="#">View All</a>
+                            </div>
+                        </div>
+
+                        <!-- Job Title -->
+                        <div class="job-title d-flex justify-content-between align-items-center">
+                            <div class="field-one w-25">
+                                Job Title
+                            </div>
+                            <div class="field-two w-25">Skills</div>
+                            <div class="field-three w-15">Experience</div>
+                            <div class="field-four w-35">City</div>
+                        </div>
+
+                        <!-- Job One -->
+                        <div class="job-one d-flex justify-content-between align-items-center">
+                            <div class="field-one w-25">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="jobOne">
+                                    <label class="form-check-label" for="jobOne">
+                                        Web Developer
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="field-two w-25">.NET</div>
+                            <div class="field-three w-15">1 to 3 Years</div>
+                            <div class="field-four w-35">Rajkot - Gujarat</div>
+                        </div>
+
+                        <!-- Job Two -->
+                        <div class="job-one d-flex justify-content-between align-items-center">
+                            <div class="field-one w-25">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="jobTwo">
+                                    <label class="form-check-label" for="jobTwo">
+                                        Software Engineer
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="field-two w-25">.NET, Android</div>
+                            <div class="field-three w-15">1 to 3 Years</div>
+                            <div class="field-four w-35">Badarpur - Assam</div>
+                        </div>
+
+                        <!-- Job Three -->
+                        <div class="job-one d-flex justify-content-between align-items-center">
+                            <div class="field-one w-25">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="jobThree">
+                                    <label class="form-check-label" for="jobThree">
+                                        Software Tester
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="field-two w-25">Programming , Reporting</div>
+                            <div class="field-three w-15">1 to 3 Years</div>
+                            <div class="field-four w-35">Badarpur - Assam</div>
+                        </div>
+
+                        <!-- Job Four -->
+                        <div class="job-one d-flex justify-content-between align-items-center">
+                            <div class="field-one w-25">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="jobFour">
+                                    <label class="form-check-label" for="jobFour">
+                                        Software Engineer
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="field-two w-25">.NET, Android</div>
+                            <div class="field-three w-15">1 to 3 Years</div>
+                            <div class="field-four w-35">Badarpur - Assam</div>
+                        </div>
+
+                        <!-- Job Five -->
+                        <div class="job-one d-flex justify-content-between align-items-center">
+                            <div class="field-one w-25">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="jobFive">
+                                    <label class="form-check-label" for="jobFive">
+                                        Software Tester
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="field-two w-25">Programming , Reporting</div>
+                            <div class="field-three w-15">1 to 3 Years</div>
+                            <div class="field-four w-35">Badarpur - Assam</div>
+                        </div>
+                    </div>
+
+                    <!-- To-Do List -->
+                    <div class="to-do-list">
+                        <!-- List Heading -->
+                        <div class="list-heading">
+                            To-Do List
+                        </div>
+
+                        <!-- List One -->
+                        <div class="list-one d-flex justify-content-between align-items-center">
+                            <div class="field-one w-45">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="listOne">
+                                    <label class="form-check-label" for="listOne">
+                                        Call Shruti Yadav - Studio BU
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="field-two w-15">18-06-2021</div>
+                            <div class="field-three w-15">Studio</div>
+                            <div class="field-four w-15 d-flex align-items-center">
+                                <div class="high"></div>
+                                High
+                            </div>
+                            <div class="field-five w-10 d-flex justify-content-end">
+                                <div class="circle-border"></div>
+                                <div class="circle-border"></div>
+                                <div class="circle-border"></div>
+                            </div>
+                        </div>
+
+                        <!-- List Two -->
+                        <div class="list-one d-flex justify-content-between align-items-center">
+                            <div class="field-one w-45">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="listTwo">
+                                    <label class="form-check-label" for="listTwo">
+                                        Review Job applications of BD Profile
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="field-two w-15">19-06-2021</div>
+                            <div class="field-three w-15">Recruitment</div>
+                            <div class="field-four w-15 d-flex align-items-center">
+                                <div class="medium"></div>
+                                Medium
+                            </div>
+                            <div class="field-five w-10 d-flex justify-content-end">
+                                <div class="circle-border"></div>
+                                <div class="circle-border"></div>
+                                <div class="circle-border"></div>
+                            </div>
+                        </div>
+
+                        <!-- List Three -->
+                        <div class="list-one d-flex justify-content-between align-items-center">
+                            <div class="field-one w-45">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="listThree">
+                                    <label class="form-check-label" for="listThree">
+                                        Mail HR | Company Policy
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="field-two w-15">18-06-2021</div>
+                            <div class="field-three w-15">HR</div>
+                            <div class="field-four w-15 d-flex align-items-center">
+                                <div class="high"></div>
+                                High
+                            </div>
+                            <div class="field-five w-10 d-flex justify-content-end">
+                                <div class="circle-border"></div>
+                                <div class="circle-border"></div>
+                                <div class="circle-border"></div>
+                            </div>
+                        </div>
+
+                        <!-- List Four -->
+                        <div class="list-one d-flex justify-content-between align-items-center">
+                            <div class="field-one w-45">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="listFour">
+                                    <label class="form-check-label" for="listFour">
+                                        Call Vendor for Trophies
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="field-two w-15">20-06-2021</div>
+                            <div class="field-three w-15">Vendor</div>
+                            <div class="field-four w-15 d-flex align-items-center">
+                                <div class="low"></div>
+                                Low
+                            </div>
+                            <div class="field-five w-10 d-flex justify-content-end">
+                                <div class="circle-border"></div>
+                                <div class="circle-border"></div>
+                                <div class="circle-border"></div>
+                            </div>
+                        </div>
+
+                        <!-- List Five -->
+                        <div class="list-one d-flex justify-content-between align-items-center">
+                            <div class="field-one w-45">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="listFive">
+                                    <label class="form-check-label" for="listFive">
+                                        Post Frontend Developer JD
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="field-two w-15">19-06-2021</div>
+                            <div class="field-three w-15">Recruitment</div>
+                            <div class="field-four w-15 d-flex align-items-center">
+                                <div class="medium"></div>
+                                Medium
+                            </div>
+                            <div class="field-five w-10 d-flex justify-content-end">
+                                <div class="circle-border"></div>
+                                <div class="circle-border"></div>
+                                <div class="circle-border"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <footer class="footer text-center">
+                        Copyright © 2021 VolkHR. All rights reserved.
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+        integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+        integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
+        crossorigin="anonymous"></script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

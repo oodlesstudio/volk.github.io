@@ -1,0 +1,322 @@
+h1, h2, h3, h4, h5, h6, p{
+    margin-bottom: 0px;
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #FCFCFC;
+}
+.container-fluid{
+    max-width: 1366px;
+}
+
+.w-45{
+    width: 45%;
+}
+.w-40{
+    width: 40%;
+}
+.w-35{
+    width: 35%;
+}
+.w-15{
+    width: 15%;
+}
+.w-10{
+    width: 10%;
+}
+
+
+/* Dashboard Left */
+.dashboard-left{
+    width: 17.65%;
+    max-height: 100vh;
+    background-color: #6B7A8F;
+    color: #fff;
+    padding-top: 40px;
+}
+.dashboard-left .nav{
+    margin-top: 40px;
+}
+.dashboard-left .nav .nav-link{
+    font-size: 14px;
+    color: #fff;
+    box-shadow: 0px 3px 10px #00000029;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 8px 16px;
+}
+.dashboard-left .nav .nav-link:hover{
+    background-color: #F7882F;
+}
+.dashboard-left .nav img{
+    margin-right: 14px;
+}
+.dashboard-left .nav .active{
+    background-color: #F7882F;
+}
+.logout a{
+    color: #fff;
+}
+
+/* Dashboard Right */
+.dashboard-right{
+    width: calc(100% - 17.65%);
+    padding: 0 30px;
+}
+@media only screen and (max-width: 600px) {
+    .dashboard-left{
+        width: 100%;
+    }
+    .dashboard-right{
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+/* Header */
+.header{
+    margin-top: 50px;
+    padding-right: 138px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #C5C9D7;
+}
+.header-left h2{
+    font-size: 30px;
+    font-weight: 600;
+    color: #11193C;
+    margin-bottom: 10px;
+}
+.header-left p{
+    color: #8990AD;
+}
+.header-left p span{
+    font-weight: 600;
+}
+.border-right{
+    border-right: 1px solid #C5C9D7;
+    height: 25px;
+}
+.has-search{
+    width: 375px;
+}
+.has-search .form-control{
+    padding: 10px 52px;
+    background: #FFFFFF;
+    border: 1px solid #F5F5F5;
+    border-radius: 5px;
+    color: #8990AD;
+}
+.has-search .form-control:focus{
+    box-shadow: none;
+}
+.has-search ::placeholder{
+    color: #8990AD
+}
+.has-search .form-control-feedback{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    color: #8990AD;
+    margin: 13px 16px;
+}
+.fa-bell{
+    color: #9647DB;
+    font-size: 20px;
+}
+.header-right-top,
+.header-right-bottom{
+    color: #11193C;
+}
+.header-right-bottom{
+    font-size: 14px;
+    margin-top: 2px;
+}
+@media only screen and (max-width: 600px) {
+    .header{
+        flex-direction: column;
+    }
+}
+
+/* Reminder */
+.reminder-one{
+    border-bottom: 1px solid #F5F5F5;
+    padding: 16px 24px 16px 16px;
+}
+.reminder-left,
+.reminder-center a,
+.reminder-right a{
+    font-size: 14px;
+    color: #8990AD;
+    font-weight: 600;
+}
+.reminder-left{
+    color: #6B7A8F;
+}
+.reminder-left p{
+    font-size: 12px;
+    font-weight: 400;
+    color: #8990AD;
+    margin-top: 8px;
+}
+.reminder-center a{
+    color: #F7882F;
+}
+.calender-button{
+    border-bottom: 1px solid #F5F5F5;
+    padding: 16px;
+}
+.calender-button a{
+    font-size: 10px;
+    font-weight: 700;
+    color: #F7882F;
+    border: 1px solid #F7882F;
+    border-radius: 5px;
+    padding: 4px 7px;
+}
+.calender-button a:hover{
+    background-color: #F7882F;
+    color: #fff;
+}
+
+/* Active Job Posts / To-Do List */
+.reminder,
+.calender{
+    background-color: #FFFFFF;
+    border: 1px solid #F5F5F5;
+    border-radius: 5px;
+    margin-bottom: 16px;
+}
+.reminder .reminder-heading,
+.company-strength .company-heading,
+.active-job-posts .job-heading,
+.to-do-list .list-heading{
+    font-weight: 700;
+    color: #404040;
+    border-bottom: 1px solid #F5F5F5;
+    padding: 16px;
+}
+.reminder .reminder-heading{
+    padding: 16px 26px 16px 16px;
+}
+.active-job-posts .job-heading a{
+    font-size: 10px;
+    color: #F7882F;
+    border: 1px solid #F7882F;
+    border-radius: 5px;
+    padding: 4px 12px;
+}
+.active-job-posts .job-heading a:hover{
+    background-color: #F7882F;
+    color: #fff;
+}
+.active-job-posts .job-title{
+    padding: 16px;
+    border-bottom: 1px solid #F5F5F5;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #404040;
+    font-weight: 600;
+}
+.job-one,
+.list-one{
+    padding: 16px 27px 16px 16px;
+    border-bottom: 1px solid #F5F5F5;
+}
+.field-one .form-check-input:focus{
+    box-shadow: none;
+}
+.field-one .form-check-input:checked {
+    background-color: #F7882F;
+    border-color: #F7882F;
+}
+.field-one .form-check-input{
+    border: 2px solid #C8C8C8;
+}
+.field-one .form-check-label{
+    margin-left: 14px;
+}
+.field-one{
+    font-weight: 600;
+}
+.field-one,
+.field-two,
+.field-three,
+.field-four{
+    font-size: 14px;
+    color: #404040;
+}
+.low,
+.medium,
+.high{
+    border-bottom: 8px solid #FF3309;
+    width: 8px;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+.medium{
+    border-color: #0994FF;
+}
+.low{
+    border-color: #DCE233;
+}
+.circle-border{
+    border-bottom: 6px solid #8990AD;
+    width: 6px;
+    border-radius: 3px;
+}
+.circle-border:nth-child(2){
+    margin: 0 3px;
+}
+@media only screen and (max-width: 600px) {
+    .job-one,
+    .list-one,
+    .reminder-one{
+        flex-direction: column;
+    }
+    .field-one,
+    .field-two,
+    .field-three,
+    .field-four{
+        width: 100% !important;
+        justify-content: center;
+        text-align: center;
+    }
+    .field-five{
+        display: none !important;
+    }
+    .field-one .form-check-label {
+        margin-left: 0px;
+    }
+    .job-title{
+        display: none !important;
+    }
+    .reminder-left,
+    .reminder-center,
+    .reminder-right{
+        width: 100% !important;
+    }
+    .reminder-center{
+        margin: 10px 0 5px;
+    }
+    .reminder-right{
+        text-align: center !important;
+    }
+}
+
+
+
+
+.fc-day-header{
+    font-size: 15px;
+    font-weight: 400;
+    color: #404040;
+    width: 93px;
+    height: 41px;
+}
+.fc-day{
+    width: 93px;
+    height: 77px;
+}
