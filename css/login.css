@@ -44,9 +44,7 @@ a{
 
 .organisation-login{
     max-width: 1050px;
-    margin-left: 126px;
     padding-bottom: 94px;
-    justify-content: center;
 }
 .organisation-login .col-md-7{
     width: 57.91%;
@@ -81,7 +79,7 @@ a{
     background-color: #E6E6E6;
     border-radius: 5px 5px 0px 0px;
     color: #707070;
-    width: 280px;
+    max-width: 280px;
     font-weight: 600;
 }
 .form-floating>.form-control:focus~label,
@@ -153,6 +151,9 @@ a{
 }
 .register-account .btn-primary{
     margin-bottom: 0;
+}
+.login-box .register-details .form-floating .form-control{
+    width: 280px;
 }
 
 @media only screen and (max-width: 600px) {

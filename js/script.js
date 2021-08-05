@@ -93,17 +93,28 @@ $(document).ready(function () {
           'APR',
           'MAY',
           'JUN',
-          'JUL'
+          'JUL',
+          'AUG',
+          'SEP'
         ],
         datasets: [{
           data: [
-            15339,
-            21345,
-            18483,
-            24003,
-            23489,
-            24092,
-            12034
+            // 15339,
+            // 21345,
+            // 18483,
+            // 24003,
+            // 23489,
+            // 24092,
+            // 12034
+            400,
+            550,
+            200,
+            450,
+            300,
+            550,
+            400,
+            450,
+            200
           ],
           lineTension: 0,
           backgroundColor: 'transparent',
@@ -116,7 +127,7 @@ $(document).ready(function () {
         scales: {
           yAxes: [{
             ticks: {
-              beginAtZero: false
+              beginAtZero: true
             }
           }]
         },
