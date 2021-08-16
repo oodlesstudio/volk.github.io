@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet">
+    <link rel="stylesheet" href="css/employees-list.css">
+
+    <title>Volk - Pending Employees List</title>
+</head>
+
+<body>
+    <!-- Dashboard -->
+    <section class="dashboard">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Dashboard Left -->
+                <div class="dashboard-left">
+                    <div class="volk-logo">
+                        <div class="text-center">
+                            <img src="img/volk-logo.svg" alt="Volk Logo">
+                        </div>
+
+                        <nav class="nav flex-column">
+                            <a class="nav-link" href="dashboard.html"><img src="img/icons/dashboard.svg">Dashboard</a>
+                            <a class="nav-link active" aria-current="page" href="my-employees.html"><img
+                                    src="img/icons/my-employees.svg">My Employees</a>
+                            <a class="nav-link" href="#"><img src="img/icons/layoffs.svg">Layoffs</a>
+                            <a class="nav-link" href="#"><img src="img/icons/job-posting.svg">Job Posting</a>
+                            <a class="nav-link" href="#"><img src="img/icons/search-candidate.svg">Search Candidate</a>
+                            <a class="nav-link" href="#"><img src="img/icons/interview.svg">Interview</a>
+                        </nav>
+
+                        <div class="d-flex justify-content-center">
+                            <div class="logout d-flex align-items-center justify-content-center">
+                                <a href="#" class="text-center">
+                                    <div><img src="img/icons/logout.svg"></div>
+                                    <div>Logout</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#"><img src="img/volk-logo.svg" alt="Volk Logo"></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                <div class="navbar-nav flex-column">
+                                    <a class="nav-link active" aria-current="page" href="dashboard.html"><img
+                                            src="img/icons/dashboard.svg">Dashboard</a>
+                                    <a class="nav-link" href="#"><img src="img/icons/my-employees.svg">My Employees</a>
+                                    <a class="nav-link" href="#"><img src="img/icons/layoffs.svg">Layoffs</a>
+                                    <a class="nav-link" href="#"><img src="img/icons/job-posting.svg">Job Posting</a>
+                                    <a class="nav-link" href="#"><img src="img/icons/search-candidate.svg">Search
+                                        Candidate</a>
+                                    <a class="nav-link" href="#"><img src="img/icons/interview.svg">Interview</a>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <div class="logout d-flex align-items-center justify-content-center">
+                                        <a href="#" class="text-center">
+                                            <div><img src="img/icons/logout.svg"></div>
+                                            <div>Logout</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- Dashboard Right -->
+                <div class="dashboard-right overflow-auto">
+                    <!-- Header -->
+                    <header class="header d-flex align-items-center justify-content-between">
+                        <div class="header-left">
+                            <h2>My Employees</h2>
+                            <p>Welcome back, <span>Oodles Technologies</span></p>
+                        </div>
+
+                        <div class="header-right d-flex align-items-center">
+                            <a href="#" class="notification">
+                                <img src="img/icons/bell.svg">
+                            </a>
+                            <a href="#">
+                                <img src="img/profile.png" alt="VolkHR">
+                            </a>
+                            <a href="#">
+                                <div class="header-right-top">VolkHr</div>
+                                <div class="header-right-bottom">(Admin)</div>
+                            </a>
+                        </div>
+                    </header>
+
+                    <div class="d-flex justify-content-between align-items-center mt-3 mb-3 select-employees">
+                        <div class="btn-group">
+                            <a href="my-employees.html" class="btn btn-primary">All
+                                Employees</a>
+                            <a href="invites-sent.html" class="btn btn-primary">Invites Sent</a>
+                            <a href="approval-pending.html" class="btn btn-primary active" aria-current="page">Approval Pending</a>
+                        </div>
+
+                        <div class="invite">
+                            <a href="#">Invite</a>
+                        </div>
+                    </div>
+
+                    <!-- Active Job Posts -->
+                    <div class="active-job-posts">
+                        <!-- Job Heading -->
+                        <div class="job-heading d-flex justify-content-between align-items-center">
+                            <div>Pending Employees List</div>
+                            <div class="d-flex views-button">
+                                <div class="btn-group views">
+                                    <a href="approval-pending.html" class="btn btn-primary">
+                                        <span class="material-icons-outlined view-week">view_week</span>
+                                    </a>
+                                    <a href="pending-employees.html" class="btn btn-primary active" aria-current="page">
+                                        <span class="material-icons-outlined">view_agenda</span>
+                                    </a>
+                                </div>
+                                <div class="form-group has-search position-relative">
+                                    <span class="fa fa-search form-control-feedback"></span>
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row ps-4 pe-4">
+                            <div class="col-md-6">
+                                <div class="employee-box d-flex justify-content-between">
+                                    <div class="d-flex employee-inner">
+                                        <div class="person-img text-center">
+                                            <div><img src="img/doctor-square.png" alt=""></div>
+                                            <div class="pending-button">Pending</div>
+                                        </div>
+
+                                        <div class="person-detail">
+                                            <h6 class="resume-head">Shubham Pachauri</h6>
+                                            <div class="social-detail">
+                                                <i class="far fa-envelope"></i>
+                                                shubham.pachauri@gmail.com
+                                            </div>
+                                            <div class="social-detail">
+                                                <i class="fas fa-briefcase"></i>
+                                                Sr. UI/UX Designer
+                                            </div>
+                                            <div class="social-detail">
+                                                <i class="fas fa-calendar-day"></i>
+                                                05/24/2021
+                                            </div>
+                                            <div class="social-detail">
+                                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="view-profile margin-r13 d-flex align-items-center flex-column justify-content-center">
+                                        <div class="approve-button d-flex align-items-center">
+                                            <span class="material-icons-outlined thumb-up">thumb_up_off_alt</span>
+                                            <span>Approve</span>
+                                            </div>
+                                        <div class="reject-button d-flex align-items-center">
+                                            <span class="material-icons-outlined cancel">cancel</span>
+                                            <span>Reject</span>
+                                        </div>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">View Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="employee-box d-flex justify-content-between">
+                                    <div class="d-flex employee-inner">
+                                        <div class="person-img text-center">
+                                            <div><img src="img/doctor-square.png" alt=""></div>
+                                            <div class="pending-button">Pending</div>
+                                        </div>
+
+                                        <div class="person-detail">
+                                            <h6 class="resume-head">Aditya Kumar</h6>
+                                            <div class="social-detail">
+                                                <i class="far fa-envelope"></i>
+                                                aditya.kumar2@gmail.com
+                                            </div>
+                                            <div class="social-detail">
+                                                <i class="fas fa-briefcase"></i>
+                                                Sr. Web Developer
+                                            </div>
+                                            <div class="social-detail">
+                                                <i class="fas fa-calendar-day"></i>
+                                                05/24/2021
+                                            </div>
+                                            <div class="social-detail">
+                                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="view-profile margin-r13 d-flex align-items-center flex-column justify-content-center">
+                                        <div class="approve-button d-flex align-items-center">
+                                            <span class="material-icons-outlined thumb-up">thumb_up_off_alt</span>
+                                            <span>Approve</span>
+                                            </div>
+                                        <div class="reject-button d-flex align-items-center">
+                                            <span class="material-icons-outlined cancel">cancel</span>
+                                            <span>Reject</span>
+                                        </div>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">View Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="employee-box d-flex justify-content-between">
+                                    <div class="d-flex employee-inner">
+                                        <div class="person-img text-center">
+                                            <div><img src="img/doctor-square.png" alt=""></div>
+                                            <div class="pending-button">Pending</div>
+                                        </div>
+
+                                        <div class="person-detail">
+                                            <h6 class="resume-head">Shubham Pachauri</h6>
+                                            <div class="social-detail">
+                                                <i class="far fa-envelope"></i>
+                                                shubham.pachauri@gmail.com
+                                            </div>
+                                            <div class="social-detail">
+                                                <i class="fas fa-briefcase"></i>
+                                                Project Manager
+                                            </div>
+                                            <div class="social-detail">
+                                                <i class="fas fa-calendar-day"></i>
+                                                05/24/2021
+                                            </div>
+                                            <div class="social-detail">
+                                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="view-profile margin-r13 d-flex align-items-center flex-column justify-content-center">
+                                        <div class="approve-button d-flex align-items-center">
+                                            <span class="material-icons-outlined thumb-up">thumb_up_off_alt</span>
+                                            <span>Approve</span>
+                                            </div>
+                                        <div class="reject-button d-flex align-items-center">
+                                            <span class="material-icons-outlined cancel">cancel</span>
+                                            <span>Reject</span>
+                                        </div>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">View Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="employee-box d-flex justify-content-between">
+                                    <div class="d-flex employee-inner">
+                                        <div class="person-img text-center">
+                                            <div><img src="img/doctor-square.png" alt=""></div>
+                                            <div class="pending-button">Pending</div>
+                                        </div>
+
+                                        <div class="person-detail">
+                                            <h6 class="resume-head">Aditya Kumar</h6>
+                                            <div class="social-detail">
+                                                <i class="far fa-envelope"></i>
+                                                aditya.kumar2@gmail.com
+                                            </div>
+                                            <div class="social-detail">
+                                                <i class="fas fa-briefcase"></i>
+                                                Sr. HR LeaD
+                                            </div>
+                                            <div class="social-detail">
+                                                <i class="fas fa-calendar-day"></i>
+                                                05/24/2021
+                                            </div>
+                                            <div class="social-detail">
+                                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="view-profile margin-r13 d-flex align-items-center flex-column justify-content-center">
+                                        <div class="approve-button d-flex align-items-center">
+                                            <span class="material-icons-outlined thumb-up">thumb_up_off_alt</span>
+                                            <span>Approve</span>
+                                            </div>
+                                        <div class="reject-button d-flex align-items-center">
+                                            <span class="material-icons-outlined cancel">cancel</span>
+                                            <span>Reject</span>
+                                        </div>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">View Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center page-number">
+                        <div class="page-content d-flex align-items-center">
+                            <span>Row Per Page</span>
+                            <span>5</span>
+                            <span class="material-icons-outlined arrow-down-up">arrow_drop_up</span>
+                        </div>
+
+                        <div class="page-content">1 out of 20</div>
+
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination mb-0">
+                                <li class="page-item active" aria-current="page"><a class="page-link ps-0"
+                                        href="#">1</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link pe-0" href="#">Next</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Footer -->
+                    <footer class="footer text-center">
+                        Copyright © 2021 VolkHR. All rights reserved.
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Profile</h5>
+                    <a href="#" class="download d-flex align-items-center">
+                        <span class="material-icons-outlined me-1">file_download</span>
+                        <span>Download</span>
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-3 person-image">
+                            <img src="img/doctor-square.png" alt="">
+                        </div>
+
+                        <div class="col-md-4 person-details">
+                            <h6 class="resume-heading">Shubham Pachauri</h6>
+                            <div class="social-details">
+                                <i class="far fa-envelope"></i>
+                                shubham.pachauri@gmail.com
+                            </div>
+                            <div class="social-details">
+                                <i class="fas fa-calendar-day"></i>
+                                05/24/2021
+                            </div>
+                            <div class="social-details">
+                                <i class="fas fa-mobile-alt"></i>
+                                +91 9876543210
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 social-box">
+                            <a href="#" class="social-details">
+                                <i class="fab fa-instagram"></i>
+                                https://instagram.com/georgeharrison
+                            </a>
+                            <a href="#" class="social-details">
+                                <i class="fab fa-facebook-square"></i>
+                                https://www.facebook.com/georgeharrison
+                            </a>
+                            <a href="#" class="social-details">
+                                <i class="fab fa-linkedin"></i>
+                                https://linkedin.com/georgeharrison
+                            </a>
+                        </div>
+                    </div>
+
+                    <h6 class="resume-heading career">CAREER SUMMARY</h6>
+                    <div class="border-line"></div>
+                    <p class="career-summary">The phrasal sequence of the Lorem Ipsum text is now so widespread and
+                        commonplace that many DTP
+                        programmes can generate dummy text using the starting sequence "Lorem ipsum". Fortunately, the
+                        phrase 'Lorem Ipsum' is now recognized by electronic pre-press systems and, when found, an alarm
+                        can be raised. This avoids a publication going to print with overlooked dummy text.</p>
+
+                    <div class="row">
+                        <div class="resume-left col-md-7">
+                            <h6 class="resume-heading">WORK EXPERIENCE</h6>
+                            <div class="border-line"></div>
+
+                            <div class="row work-experience">
+                                <div class="col-md-1 d-flex flex-column align-items-center round-border">
+                                    <div class="border-sm"></div>
+                                    <div class="border-lg"></div>
+                                    <div class="border-sm"></div>
+                                </div>
+
+                                <div class="col-md-11">
+                                    <div class="d-flex justify-content-between margin-b10 solutions">
+                                        <div>
+                                            <h6 class="resume-heading margin-b6">Front-end Web Developer</h6>
+                                            <div class="resume-heading-sm">April 2009 - December 2011 , 85</div>
+                                        </div>
+                                        <div class="resume-heading-bold">Majormod Technologies</div>
+                                    </div>
+                                    <p>Certain internet providers exploit the fact that fill text cannot be recognized
+                                        by
+                                        automatic search engines - meaningful information cannot be distinguished from
+                                        meaningless: Target-generated dummy text mixed with a certain combination of
+                                        search
+                                        terms can lead to an increased frequency of visits by search machine users. As a
+                                        consequence, advertising revenues, which rely on website 'hits', are increased.
+                                    </p>
+
+                                    <div class="d-flex justify-content-between margin-t22 margin-b10 solutions">
+                                        <div>
+                                            <h6 class="resume-heading margin-b6">Web Designing Trainee</h6>
+                                            <div class="resume-heading-sm">September 2012 - October 2014 , 356</div>
+                                        </div>
+                                        <div class="resume-heading-bold">IONS Solutions</div>
+                                    </div>
+                                    <p>This is required when, for example, the final text is not yet available. Dummy
+                                        text
+                                        is
+                                        also known as 'fill text'. It is said that song composers of the past used dummy
+                                        texts
+                                        as lyrics when writing melodies in order to have a 'ready-made' text to sing
+                                        with
+                                        the
+                                        melody. Dummy texts have been in use by typesetters since the 16th century.</p>
+
+                                    <div class="view-more mb-1">
+                                        <a href="#" class="d-flex align-items-center">
+                                            <span>View More Experience</span>
+                                            <i class="fas fa-chevron-down"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <h6 class="resume-heading margin-t22">EDUCATION</h6>
+                            <div class="border-line"></div>
+                            <div class="row work-experience">
+                                <div class="col-md-1 d-flex flex-column align-items-center round-border-2">
+                                    <div class="border-sm"></div>
+                                </div>
+                                <div class="col-md-11">
+                                    <div class="d-flex justify-content-between margin-b10 solutions">
+                                        <div>
+                                            <h6 class="resume-heading margin-b6">BE/B</h6>
+                                            <div class="resume-heading-sm">Computer Networking
+                                                <br>December,2012-September,2014
+                                            </div>
+                                        </div>
+                                        <div class="resume-heading-bold">K.N.D Collage Ahemadabad</div>
+                                    </div>
+
+                                    <p>Dummy text is also used to demonstrate the appearance of different typefaces
+                                        and
+                                        layouts, and in general the content of dummy text is nonsensical. Due to its
+                                        widespread
+                                        use as filler text for layouts, non-readability is of great importance: human
+                                        perception
+                                        is tuned to recognize</p>
+
+                                    <div class="view-more">
+                                        <a href="#" class="d-flex align-items-center">
+                                            <span>View More Education</span>
+                                            <i class="fas fa-chevron-down"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resume-right col-md-5">
+                            <h6 class="resume-heading">SKILLS & TOOLS</h6>
+                            <div class="border-line pb-1"></div>
+                            <div>
+                                <div class="border-box">JAVA</div>
+                                <div class="border-box">A-Frames</div>
+                                <div class="border-box">A/R Analysis</div>
+                                <div class="border-box">A/V Design</div>
+                                <div class="border-box">A2A</div>
+                            </div>
+
+                            <h6 class="resume-heading awards">AWARDS</h6>
+                            <div class="border-line"></div>
+
+                            <h6 class="resume-heading industry">INDUSTRY</h6>
+                            <div class="border-line pb-1"></div>
+                            <h6 class="resume-heading">Cosmetics</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+        integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="css/my-employees.css">
+
+    <title>Volk - My Employees</title>
+</head>
+
+<body>
+    <!-- Dashboard -->
+    <section class="dashboard">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Dashboard Left -->
+                <div class="dashboard-left">
+                    <div class="volk-logo">
+                        <div class="text-center">
+                            <img src="img/volk-logo.svg" alt="Volk Logo">
+                        </div>
+
+                        <nav class="nav flex-column">
+                            <a class="nav-link" href="dashboard.html"><img src="img/icons/dashboard.svg">Dashboard</a>
+                            <a class="nav-link active" aria-current="page" href="my-employees.html"><img
+                                    src="img/icons/my-employees.svg">My Employees</a>
+                            <a class="nav-link" href="#"><img src="img/icons/layoffs.svg">Layoffs</a>
+                            <a class="nav-link" href="#"><img src="img/icons/job-posting.svg">Job Posting</a>
+                            <a class="nav-link" href="#"><img src="img/icons/search-candidate.svg">Search Candidate</a>
+                            <a class="nav-link" href="#"><img src="img/icons/interview.svg">Interview</a>
+                        </nav>
+
+                        <div class="d-flex justify-content-center">
+                            <div class="logout d-flex align-items-center justify-content-center">
+                                <a href="#" class="text-center">
+                                    <div><img src="img/icons/logout.svg"></div>
+                                    <div>Logout</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#"><img src="img/volk-logo.svg" alt="Volk Logo"></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                <div class="navbar-nav flex-column">
+                                    <a class="nav-link active" aria-current="page" href="dashboard.html"><img
+                                            src="img/icons/dashboard.svg">Dashboard</a>
+                                    <a class="nav-link" href="#"><img src="img/icons/my-employees.svg">My Employees</a>
+                                    <a class="nav-link" href="#"><img src="img/icons/layoffs.svg">Layoffs</a>
+                                    <a class="nav-link" href="#"><img src="img/icons/job-posting.svg">Job Posting</a>
+                                    <a class="nav-link" href="#"><img src="img/icons/search-candidate.svg">Search
+                                        Candidate</a>
+                                    <a class="nav-link" href="#"><img src="img/icons/interview.svg">Interview</a>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <div class="logout d-flex align-items-center justify-content-center">
+                                        <a href="#" class="text-center">
+                                            <div><img src="img/icons/logout.svg"></div>
+                                            <div>Logout</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- Dashboard Right -->
+                <div class="dashboard-right overflow-auto">
+                    <!-- Header -->
+                    <header class="header d-flex align-items-center justify-content-between">
+                        <div class="header-left">
+                            <h2>My Employees</h2>
+                            <p>Welcome back, <span>Oodles Technologies</span></p>
+                        </div>
+
+                        <div class="header-right d-flex align-items-center">
+                            <a href="#" class="notification">
+                                <img src="img/icons/bell.svg">
+                            </a>
+                            <a href="#">
+                                <img src="img/profile.png" alt="VolkHR">
+                            </a>
+                            <a href="#">
+                                <div class="header-right-top">VolkHr</div>
+                                <div class="header-right-bottom">(Admin)</div>
+                            </a>
+                        </div>
+                    </header>
+
+                    <div class="d-flex justify-content-between align-items-center mt-3 mb-3 select-employees">
+                        <div class="btn-group">
+                            <a href="my-employees.html" class="btn btn-primary active" aria-current="page">All Employees</a>
+                            <a href="invites-sent.html" class="btn btn-primary">Invites Sent</a>
+                            <a href="approval-pending.html" class="btn btn-primary">Approval Pending</a>
+                        </div>
+
+                        <div class="invite">
+                            <a href="#">Invite</a>
+                        </div>
+                    </div>
+
+                    <!-- Active Job Posts -->
+                    <div class="active-job-posts">
+                        <!-- Job Heading -->
+                        <div class="job-heading d-flex justify-content-between align-items-center">
+                            <div>Employees List</div>
+                            <div class="d-flex views-button">
+                            <div class="btn-group views">
+                                <a href="my-employees.html" class="btn btn-primary active" aria-current="page">
+                                    <span class="material-icons-outlined view-week">view_week</span>
+                                </a>
+                                <a href="employees-list.html" class="btn btn-primary">
+                                    <span class="material-icons-outlined">view_agenda</span>
+                                </a>
+                            </div>
+                            <div class="form-group has-search position-relative">
+                                <span class="fa fa-search form-control-feedback"></span>
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- Job Title -->
+                        <div class="job-title d-flex justify-content-between align-items-center">
+                            <div class="w-20 d-flex">
+                                <span>Name</span>
+                                <span class="material-icons-outlined unfold-more">unfold_more</span>
+                            </div>
+                            <div class="w-23 d-flex">
+                                <span>Designation</span>
+                                <span class="material-icons-outlined unfold-more">unfold_more</span>
+                            </div>
+                            <div class="w-30 d-flex">
+                                <span>Email</span>
+                                <span class="material-icons-outlined unfold-more">unfold_more</span>
+                            </div>
+                            <div class="w-20 d-flex">
+                                <span>Joining Date</span>
+                                <span class="material-icons-outlined unfold-more">unfold_more</span>
+                            </div>
+                            <div class="w-7">Status</div>
+                        </div>
+
+                        <!-- Job One -->
+                        <div class="job-one d-flex justify-content-between align-items-center">
+                            <div class="field-one w-20">Shubham Pachauri</div>
+                            <div class="field-two w-23">Web Developer</div>
+                            <div class="field-three w-30">shubham.pachauri@gmail.com</div>
+                            <div class="field-four w-20">05/24/2021</div>
+                            <div class="field-five w-7"><span class="active">Active</span></div>
+                        </div>
+
+                        <!-- Job Two -->
+                        <div class="job-one d-flex justify-content-between align-items-center">
+                            <div class="field-one w-20">Aditya Kumar</div>
+                            <div class="field-two w-23">Software Developer</div>
+                            <div class="field-three w-30">aditya.kumar@gmail.com</div>
+                            <div class="field-four w-20">05/14/2021</div>
+                            <div class="field-five w-7"><span class="active">Active</span></div>
+                        </div>
+
+
+                        <!-- Job Three -->
+                        <div class="job-one d-flex justify-content-between align-items-center">
+                            <div class="field-one w-20">Neha Gupta</div>
+                            <div class="field-two w-23">UI/UX Designer</div>
+                            <div class="field-three w-30">neha.gupta@gmail.com</div>
+                            <div class="field-four w-20">05/23/2021</div>
+                            <div class="field-five w-7"><span class="active">Active</span></div>
+                        </div>
+
+                        <!-- Job Four -->
+                        <div class="job-one d-flex justify-content-between align-items-center">
+                            <div class="field-one w-20">Abhishek Verma</div>
+                            <div class="field-two w-23">Python App Developer</div>
+                            <div class="field-three w-30">abhishek.verma@gmail.com</div>
+                            <div class="field-four w-20">05/11/2021</div>
+                            <div class="field-five w-7"><span class="active">Active</span></div>
+                        </div>
+
+                        <!-- Job One -->
+                        <div class="job-one d-flex justify-content-between align-items-center">
+                            <div class="field-one w-20">Divya Shukla</div>
+                            <div class="field-two w-23">Manager</div>
+                            <div class="field-three w-30">divya.shukla@gmail.com</div>
+                            <div class="field-four w-20">05/16/2021</div>
+                            <div class="field-five w-7"><span class="active">Active</span></div>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center page-number">
+                        <div class="page-content d-flex align-items-center">
+                            <span>Row Per Page</span>
+                            <span>5</span>
+                            <span class="material-icons-outlined arrow-down-up">arrow_drop_up</span>
+                        </div>
+
+                        <div class="page-content">1 out of 20</div>
+
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination mb-0">
+                                <li class="page-item active" aria-current="page"><a class="page-link ps-0" href="#">1</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link pe-0" href="#">Next</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Footer -->
+                    <footer class="footer text-center">
+                        Copyright © 2021 VolkHR. All rights reserved.
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+        integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
