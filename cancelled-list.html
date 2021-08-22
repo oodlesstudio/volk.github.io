@@ -13,9 +13,9 @@
     <link
         href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/my-employees.css">
+    <link rel="stylesheet" href="css/layoff-list.css">
 
-    <title>Volk - Invites Sent</title>
+    <title>Volk - Layoff Cancelled List</title>
 </head>
 
 <body>
@@ -32,9 +32,10 @@
 
                         <nav class="nav flex-column">
                             <a class="nav-link" href="dashboard.html"><img src="img/icons/dashboard.svg">Dashboard</a>
-                            <a class="nav-link active" aria-current="page" href="my-employees.html"><img
-                                    src="img/icons/my-employees.svg">My Employees</a>
-                            <a class="nav-link" href="layoffs.html"><img src="img/icons/layoffs.svg">Layoffs</a>
+                            <a class="nav-link" href="my-employees.html"><img src="img/icons/my-employees.svg">My
+                                Employees</a>
+                            <a class="nav-link active" aria-current="page" href="layoffs.html"><img
+                                    src="img/icons/layoffs.svg">Layoffs</a>
                             <a class="nav-link" href="#"><img src="img/icons/job-posting.svg">Job Posting</a>
                             <a class="nav-link" href="#"><img src="img/icons/search-candidate.svg">Search Candidate</a>
                             <a class="nav-link" href="#"><img src="img/icons/interview.svg">Interview</a>
@@ -87,7 +88,7 @@
                     <!-- Header -->
                     <header class="header d-flex align-items-center justify-content-between">
                         <div class="header-left">
-                            <h2>My Employees</h2>
+                            <h2>Layoffs</h2>
                             <p>Welcome back, <span>Oodles Technologies</span></p>
                         </div>
 
@@ -107,14 +108,12 @@
 
                     <div class="d-flex justify-content-between align-items-center mt-3 mb-3 select-employees">
                         <div class="btn-group">
-                            <a href="my-employees.html" class="btn btn-primary">All Employees</a>
-                            <a href="invites-sent.html" class="btn btn-primary active" aria-current="page">Invites
-                                Sent</a>
-                            <a href="approval-pending.html" class="btn btn-primary">Approval Pending</a>
+                            <a href="layoffs.html" class="btn btn-primary">Lay-Off</a>
+                            <a href="cancelled.html" class="btn btn-primary active" aria-current="page">Cancelled</a>
                         </div>
 
                         <div class="invite">
-                            <a href="#inviteEmployee" data-bs-toggle="modal">Invite</a>
+                            <a href="#inviteEmployee" data-bs-toggle="modal">+ Add</a>
                         </div>
                     </div>
 
@@ -122,13 +121,13 @@
                     <div class="active-job-posts">
                         <!-- Job Heading -->
                         <div class="job-heading d-flex justify-content-between align-items-center">
-                            <div>Pending Employees</div>
+                            <div>Layoff Cancelled List</div>
                             <div class="d-flex views-button">
                                 <div class="btn-group views">
-                                    <a href="invites-sent.html" class="btn btn-primary active" aria-current="page">
+                                    <a href="cancelled.html" class="btn btn-primary">
                                         <span class="material-icons-outlined view-week">view_week</span>
                                     </a>
-                                    <a href="employees.html" class="btn btn-primary">
+                                    <a href="cancelled-list.html" class="btn btn-primary active" aria-current="page">
                                         <span class="material-icons-outlined">view_agenda</span>
                                     </a>
                                 </div>
@@ -139,100 +138,177 @@
                             </div>
                         </div>
 
-                        <!-- Job Title -->
-                        <div class="job-title d-flex justify-content-between align-items-center">
-                            <div class="w-18 d-flex">
-                                <span>Name</span>
-                                <span class="material-icons-outlined unfold-more">unfold_more</span>
-                            </div>
-                            <div class="w-20 d-flex">
-                                <span>Designation</span>
-                                <span class="material-icons-outlined unfold-more">unfold_more</span>
-                            </div>
-                            <div class="w-25 d-flex">
-                                <span>Email</span>
-                                <span class="material-icons-outlined unfold-more">unfold_more</span>
-                            </div>
-                            <div class="w-18 d-flex">
-                                <span>Joining Date</span>
-                                <span class="material-icons-outlined unfold-more">unfold_more</span>
-                            </div>
-                            <div class="w-12">
-                                <span>Status</span>
-                            </div>
-                            <div class="w-7 text-end padding-r10">
-                                <span>Action</span>
-                            </div>
-                        </div>
+                        <div class="row ps-4 pe-4">
+                            <div class="col-md-6">
+                                <div class="employee-box">
+                                    <div class="d-flex employee-inner">
+                                        <div class="person-img">
+                                            <img src="img/doctor-square.png" alt="">
+                                        </div>
 
-                        <!-- Job One -->
-                        <div class="job-one d-flex justify-content-between align-items-center">
-                            <div class="field-one w-18">Shubham Pachauri</div>
-                            <div class="field-two w-20">Web Developer</div>
-                            <div class="field-three w-25">shubham.pachauri@gmail.com</div>
-                            <div class="field-four w-18">05/24/2021</div>
-                            <div class="field-five w-12"><span class="pending">Pending</span></div>
-                            <div class="field-six w-7 text-center">
-                                <a href="#cancelInvitation" data-bs-toggle="modal">
-                                    <span class="material-icons-outlined cancel">cancel</span>
-                                </a>
+                                        <div class="person-detail w-100">
+                                            <div class="id-44">Id : <span>#44</span></div>
+                                                <div><h6 class="resume-head">Shubham Pachauri</h6></div>
+                                            <div class="social-detail">Email : <span>shubham.pachauri@gmail.com</span>
+                                            </div>
+                                            <div class="social-detail">Designation : <span>Sr. UI/UX Designer</span>
+                                            </div>
+                                            <div class="social-detail">Release Date : <span>05/24/2021</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="reason d-flex">
+                                            <div class="reason-left">Reason :</div>
+                                            <div class="reason-right">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                        </div>
+                                        <div class="d-flex reason">
+                                            <div class="rating-left">Rating :</div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons-outlined gold-star">star</span>
+                                                <span class="material-icons-outlined gold-star">star</span>
+                                                <span class="material-icons-outlined gold-star">star</span>
+                                                <span class="material-icons-outlined gold-star">star_half</span>
+                                                <span class="material-icons-outlined grey-star">grade</span>
+                                                <span class="rating">4.5</span>
+                                            </div>
+                                        </div>
+                                        <div class="reason d-flex">
+                                            <div class="reason-left">Review :</div>
+                                            <div class="reason-right">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- Job Two -->
-                        <div class="job-one d-flex justify-content-between align-items-center">
-                            <div class="field-one w-18">Aditya Kumar</div>
-                            <div class="field-two w-20">Software Developer</div>
-                            <div class="field-three w-25">aditya.kumar@gmail.com</div>
-                            <div class="field-four w-18">05/14/2021</div>
-                            <div class="field-five w-12"><span class="pending">Pending</span></div>
-                            <div class="field-six w-7 text-center">
-                                <a href="#cancelInvitation" data-bs-toggle="modal">
-                                    <span class="material-icons-outlined cancel">cancel</span>
-                                </a>
+                            <div class="col-md-6">
+                                <div class="employee-box">
+                                    <div class="d-flex employee-inner">
+                                        <div class="person-img">
+                                            <img src="img/doctor-square.png" alt="">
+                                        </div>
+
+                                        <div class="person-detail w-100">
+                                            <div class="id-44">Id : <span>#44</span></div>
+                                                <div><h6 class="resume-head">Aditya Kumar</h6></div>
+                                            <div class="social-detail">Email : <span>aditya.21@gmail.com</span>
+                                            </div>
+                                            <div class="social-detail">Designation : <span>Sr. UI/UX Designer</span>
+                                            </div>
+                                            <div class="social-detail">Release Date : <span>05/24/2021</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="reason d-flex">
+                                            <div class="reason-left">Reason :</div>
+                                            <div class="reason-right">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                        </div>
+                                        <div class="d-flex reason">
+                                            <div class="rating-left">Rating :</div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons-outlined gold-star">star</span>
+                                                <span class="material-icons-outlined gold-star">star</span>
+                                                <span class="material-icons-outlined gold-star">star</span>
+                                                <span class="material-icons-outlined gold-star">star_half</span>
+                                                <span class="material-icons-outlined grey-star">grade</span>
+                                                <span class="rating">4.5</span>
+                                            </div>
+                                        </div>
+                                        <div class="reason d-flex">
+                                            <div class="reason-left">Review :</div>
+                                            <div class="reason-right">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
 
+                            <div class="col-md-6">
+                                <div class="employee-box">
+                                    <div class="d-flex employee-inner">
+                                        <div class="person-img">
+                                            <img src="img/doctor-square.png" alt="">
+                                        </div>
 
-                        <!-- Job Three -->
-                        <div class="job-one d-flex justify-content-between align-items-center">
-                            <div class="field-one w-18">Neha Gupta</div>
-                            <div class="field-two w-20">UI/UX Designer</div>
-                            <div class="field-three w-25">neha.gupta@gmail.com</div>
-                            <div class="field-four w-18">05/23/2021</div>
-                            <div class="field-five w-12"><span class="pending">Pending</span></div>
-                            <div class="field-six w-7 text-center">
-                                <a href="#cancelInvitation" data-bs-toggle="modal">
-                                    <span class="material-icons-outlined cancel">cancel</span>
-                                </a>
+                                        <div class="person-detail w-100">
+                                            <div class="id-44">Id : <span>#44</span></div>
+                                                <div><h6 class="resume-head">Shubham Pachauri</h6></div>
+                                            <div class="social-detail">Email : <span>shubham.pachauri@gmail.com</span>
+                                            </div>
+                                            <div class="social-detail">Designation : <span>Sr. UI/UX Designer</span>
+                                            </div>
+                                            <div class="social-detail">Release Date : <span>05/24/2021</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="reason d-flex">
+                                            <div class="reason-left">Reason :</div>
+                                            <div class="reason-right">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                        </div>
+                                        <div class="d-flex reason">
+                                            <div class="rating-left">Rating :</div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons-outlined gold-star">star</span>
+                                                <span class="material-icons-outlined gold-star">star</span>
+                                                <span class="material-icons-outlined gold-star">star</span>
+                                                <span class="material-icons-outlined gold-star">star_half</span>
+                                                <span class="material-icons-outlined grey-star">grade</span>
+                                                <span class="rating">4.5</span>
+                                            </div>
+                                        </div>
+                                        <div class="reason d-flex">
+                                            <div class="reason-left">Review :</div>
+                                            <div class="reason-right">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- Job Four -->
-                        <div class="job-one d-flex justify-content-between align-items-center">
-                            <div class="field-one w-18">Abhishek Verma</div>
-                            <div class="field-two w-20">Python App Developer</div>
-                            <div class="field-three w-25">abhishek.verma@gmail.com</div>
-                            <div class="field-four w-18">05/11/2021</div>
-                            <div class="field-five w-12"><span class="pending">Pending</span></div>
-                            <div class="field-six w-7 text-center">
-                                <a href="#cancelInvitation" data-bs-toggle="modal">
-                                    <span class="material-icons-outlined cancel">cancel</span>
-                                </a>
-                            </div>
-                        </div>
+                            <div class="col-md-6">
+                                <div class="employee-box">
+                                    <div class="d-flex employee-inner">
+                                        <div class="person-img">
+                                            <img src="img/doctor-square.png" alt="">
+                                        </div>
 
-                        <!-- Job Five -->
-                        <div class="job-one d-flex justify-content-between align-items-center">
-                            <div class="field-one w-18">Divya Shukla</div>
-                            <div class="field-two w-20">Manager</div>
-                            <div class="field-three w-25">divya.shukla@gmail.com</div>
-                            <div class="field-four w-18">05/16/2021</div>
-                            <div class="field-five w-12"><span class="pending">Pending</span></div>
-                            <div class="field-six w-7 text-center">
-                                <a href="#cancelInvitation" data-bs-toggle="modal">
-                                    <span class="material-icons-outlined cancel">cancel</span>
-                                </a>
+                                        <div class="person-detail w-100">
+                                            <div class="id-44">Id : <span>#44</span></div>
+                                                <div><h6 class="resume-head">Aditya Kumar</h6></div>
+                                            <div class="social-detail">Email : <span>aditya.21@gmail.com</span>
+                                            </div>
+                                            <div class="social-detail">Designation : <span>Sr. UI/UX Designer</span>
+                                            </div>
+                                            <div class="social-detail">Release Date : <span>05/24/2021</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="reason d-flex">
+                                            <div class="reason-left">Reason :</div>
+                                            <div class="reason-right">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                        </div>
+                                        <div class="d-flex reason">
+                                            <div class="rating-left">Rating :</div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons-outlined gold-star">star</span>
+                                                <span class="material-icons-outlined gold-star">star</span>
+                                                <span class="material-icons-outlined gold-star">star</span>
+                                                <span class="material-icons-outlined gold-star">star_half</span>
+                                                <span class="material-icons-outlined grey-star">grade</span>
+                                                <span class="rating">4.5</span>
+                                            </div>
+                                        </div>
+                                        <div class="reason d-flex">
+                                            <div class="reason-left">Review :</div>
+                                            <div class="reason-right">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
 

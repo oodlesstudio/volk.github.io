@@ -34,7 +34,7 @@
                             <a class="nav-link" href="dashboard.html"><img src="img/icons/dashboard.svg">Dashboard</a>
                             <a class="nav-link active" aria-current="page" href="my-employees.html"><img
                                     src="img/icons/my-employees.svg">My Employees</a>
-                            <a class="nav-link" href="#"><img src="img/icons/layoffs.svg">Layoffs</a>
+                            <a class="nav-link" href="layoffs.html"><img src="img/icons/layoffs.svg">Layoffs</a>
                             <a class="nav-link" href="#"><img src="img/icons/job-posting.svg">Job Posting</a>
                             <a class="nav-link" href="#"><img src="img/icons/search-candidate.svg">Search Candidate</a>
                             <a class="nav-link" href="#"><img src="img/icons/interview.svg">Interview</a>
@@ -114,7 +114,7 @@
                         </div>
 
                         <div class="invite">
-                            <a href="#">Invite</a>
+                            <a href="#inviteEmployee" data-bs-toggle="modal">Invite</a>
                         </div>
                     </div>
                     
@@ -321,6 +321,66 @@
             </div>
         </div>
     </section>
+
+            <!-- Invite Employee -->
+            <div class="modal fade" id="inviteEmployee" tabindex="-1" aria-labelledby="inviteEmployeeLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="inviteEmployeeLabel">Invite Employee</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="row">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                        <label for="inputEmail">Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check check-user">
+                                        <input type="checkbox" class="form-check-input" id="checkUser">
+                                        <label class="form-check-label" for="checkUser">Check User</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                                        <label for="firstName">First Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="lasttName" placeholder="Last Name">
+                                        <label for="lastName">Last Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+        
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="designation" placeholder="Designation">
+                                    <label for="designation">Designation</label>
+                                </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="department" placeholder="Department">
+                                        <label for="department">Department</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <input placeholder="Joining Date" type="text" onfocus="(this.type = 'date')" id="joiningDate" class="form-control joining-date">
+                                </div>
+                                <div class="col-12 text-end">
+                                    <div class="submit-button"></div>
+                                    <button type="submit" class="btn btn-primary">SUBMIT</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         <!-- Resume -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

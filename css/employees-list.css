@@ -444,7 +444,7 @@ body{
     font-size: 14px;
     color: #404040;
 }
-.page-content span{
+.page-content span:nth-child(2){
     font-weight: 600;
     margin-left: 9px;
 }
@@ -477,7 +477,9 @@ body{
         font-size: 10px;
     }
     .invite a{
-        display: none;
+        font-size: 10px;
+        padding: 8px 16px;
+        margin-top: 16px;
     }
     .views-button{
         flex-direction: column;
@@ -528,7 +530,6 @@ body{
     padding: 20px 0px 30px;
     border-top: 1px solid #C5C9D7;
 }
-
 
 /* Resume */
 .modal-xl{
@@ -736,6 +737,124 @@ body{
     .resume-left,
     .resume-right{
         padding: 0 12px;
+    }
+}
+
+/* Invite Employee */
+#inviteEmployee .modal-lg{
+    max-width: 813px;
+}
+#inviteEmployee .modal-header,
+#inviteEmployee .modal-body{
+    color: #404040 !important;
+}
+#inviteEmployee .modal-header{
+    border-color: #ECECEC;
+    padding: 16px 8px 16px 0;
+    margin: 0 30px;
+}
+#inviteEmployee .modal-title{
+    font-weight: 700;
+    font-size: 16px;
+}
+#inviteEmployee .btn-close{
+    font-size: 14px;
+}
+#inviteEmployee .btn-close:focus{
+    box-shadow: none;
+}
+
+#inviteEmployee .modal-body{
+    padding: 30px;
+}
+#inviteEmployee .form-floating>.form-control,
+#inviteEmployee .form-floating>.form-select,
+#inviteEmployee .joining-date{
+    height: 48px;
+}
+.form-floating>.form-control{
+    padding: 14px 15px 13px;
+}
+#inviteEmployee .form-floating>.form-control:focus,
+#inviteEmployee .form-floating>.form-control:not(:placeholder-shown) {
+    padding-top: 20px;
+    padding-bottom: 7px;
+}
+#inviteEmployee .col-md-6,
+#inviteEmployee .col-12{
+    padding: 0 10px;
+}
+#inviteEmployee .form-floating,
+#inviteEmployee .joining-date{
+    border-bottom: 1px solid #6B7A8F !important;
+    max-width: 365px;
+    margin-bottom: 20px;
+}
+#inviteEmployee .form-control{
+    border: none;
+    background-color: #E6E6E6;
+    border-radius: 5px 5px 0px 0px;
+    color: #707070;
+    font-weight: 600;
+}
+#inviteEmployee .check-user{
+    margin-top: 13px;
+}
+#inviteEmployee .check-user .form-check-label{
+    font-weight: 600;
+    margin-left: 11px;
+    cursor: pointer;
+}
+#inviteEmployee .check-user .form-check-input{
+    border: 2px solid #6B7A8F;
+    cursor: pointer;
+    border-radius: 2px;
+}
+#inviteEmployee .check-user .form-check-input:checked {
+    background-color: #6B7A8F;
+    border-color: #6B7A8F;
+}
+#inviteEmployee .joining-date{
+    font-weight: 400;
+}
+#inviteEmployee .form-floating label{
+    color: #707070;
+}
+#inviteEmployee .form-floating>.form-control:focus~label,
+#inviteEmployee .form-floating>.form-control:not(:placeholder-shown)~label,
+#inviteEmployee .form-floating>.form-select~label{
+    opacity: 1;
+    color: #707070;
+    font-size: 10px;
+    font-weight: 600;
+}
+#inviteEmployee .form-control:focus,
+#inviteEmployee .form-check-input:focus,
+#inviteEmployee .btn-primary{
+    box-shadow: none;
+}
+#inviteEmployee .submit-button{
+    border-top: 1px solid #ECECEC;
+    margin-top: 10px;
+}
+#inviteEmployee .btn-primary{
+    background-color: #E6E6E6;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #707070;
+    padding: 9px 14px 8px 16px;
+    margin-top: 20px;
+}
+#inviteEmployee .btn-primary:hover{
+    background-color: #F7882F;
+    color: #FFFFFF;
+}
+@media only screen and (max-width: 600px) {
+    #inviteEmployee .check-user{
+        margin-top: 0;
+        margin-bottom: 20px;
     }
 }
 
